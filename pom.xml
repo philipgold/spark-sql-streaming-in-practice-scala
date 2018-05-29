@@ -24,13 +24,6 @@
     </properties>
 
     <dependencies>
-        <!-- Prevent our dummy JAR from being included in Spark distributions or uploaded to YARN -->
-        <!--<dependency>-->
-            <!--<groupId>org.spark-project.spark</groupId>-->
-            <!--<artifactId>unused</artifactId>-->
-            <!--<version>1.0.0</version>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_${scala.binary.version}</artifactId>
@@ -41,80 +34,24 @@
             <artifactId>spark-sql_${scala.binary.version}</artifactId>
             <version>${spark.project.version}</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.apache.spark</groupId>-->
-            <!--<artifactId>spark-streaming_${scala.binary.version}</artifactId>-->
-            <!--<version>${spark.project.version}</version>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.spark</groupId>-->
-            <!--<artifactId>spark-mllib_${scala.binary.version}</artifactId>-->
-            <!--<version>${spark.project.version}</version>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.spark</groupId>-->
-            <!--<artifactId>spark-hive_${scala.binary.version}</artifactId>-->
-            <!--<version>${spark.project.version}</version>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.spark</groupId>-->
-            <!--<artifactId>spark-graphx_${scala.binary.version}</artifactId>-->
-            <!--<version>${spark.project.version}</version>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.spark</groupId>-->
-            <!--<artifactId>spark-streaming-kafka-0-10_${scala.binary.version}</artifactId>-->
-            <!--<version>${spark.project.version}</version>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql-kafka-0-10_${scala.binary.version}</artifactId>
             <version>${spark.project.version}</version>
             <scope>provided</scope>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.apache.commons</groupId>-->
-            <!--<artifactId>commons-math3</artifactId>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.scalacheck</groupId>-->
-            <!--<artifactId>scalacheck_${scala.binary.version}</artifactId>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
             <version>${scala.version}</version>
             <scope>compile</scope>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>com.github.scopt</groupId>-->
-            <!--<artifactId>scopt_${scala.binary.version}</artifactId>-->
-            <!--<version>3.7.0</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>com.twitter</groupId>-->
-            <!--<artifactId>parquet-hadoop-bundle</artifactId>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>org.json4s</groupId>-->
-            <!--<artifactId>json4s-jackson_${scala.binary.version}</artifactId>-->
-            <!--<version>3.5.3</version>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<groupId>com.fasterxml.jackson.core</groupId>-->
-                    <!--<artifactId>*</artifactId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
-        <!--</dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka -->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka_2.11</artifactId>
+            <version>1.1.0</version>
+        </dependency>
     </dependencies>
 
     <build>
